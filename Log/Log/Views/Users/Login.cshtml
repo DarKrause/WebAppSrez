@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "Авторизация";
+    Layout = "~/Views/_LayoutPage1.cshtml";
+}
+<body>
+    <div class="signinform">
+        <!-- container -->
+        <div class="container">
+            <!-- main content -->
+            <div class="w3l-form-info">
+                <div class="w3_info">
+                    <h2>Авторизация</h2>
+                    <form action="Users/Autorization" method="post">
+                        <div class="input-group">
+                            <span><i class="fas fa-user" aria-hidden="true"></i></span>
+                            <input name="login" type="email" placeholder="Email" required="">
+                        </div>
+                        <div class="input-group">
+                            <span><i class="fas fa-key" aria-hidden="true"></i></span>
+                            <input name="password" type="Password" placeholder="Пароль" required="">
+                        </div>
+                        <div class="form-row bottom">
+                            <a href="#url" class="forgot">Забыли пароль?</a>
+                        </div>
+                        <button class="btn btn-primary btn-block" type="submit">Войти</button>
+                    </form>
+                    <p class="account">Ещё нет аккаунта? <a href="#signup">Зарегистрироваться</a></p>
+                </div>
+            </div>
+            <!-- //main content -->
+        </div>
+        <!-- //container -->
+    </div>
+</body>
+
+
+<!-- fontawesome v5-->
+@*<script src="js/fontawesome.js"></script>*@

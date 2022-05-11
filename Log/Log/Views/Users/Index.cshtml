@@ -1,0 +1,23 @@
+﻿@model IList <Log.Models.Data>
+
+@{
+    ViewBag.Title = "Профиль";
+    Layout = "~/Views/_LayoutPage1.cshtml";
+}
+
+<h2>Пользователь</h2>
+ 
+@foreach (var item in Model)
+{
+<div>
+    <span class="Surname">
+        @item.Surname
+    </span>
+    <span class="Name">
+        @item.Name
+    </span>
+    <span class="Patronymic">
+        @item.Patronymic
+    </span>
+</div>
+}

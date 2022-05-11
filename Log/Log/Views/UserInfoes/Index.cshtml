@@ -1,0 +1,41 @@
+﻿@model IList<Log.Models.UserInfo>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/_LayoutPage1.cshtml";
+}
+
+<body>
+    <div class="signinform">
+        <!-- container -->
+        <div class="container">
+            <!-- main content -->
+            <div class="w3l-form-info">
+                <div class="w3_info">
+                    <h2>Добро пожаловать!</h2>
+                    <img  class="test" src="~/images/man.png"/>
+                    @foreach (var item in Model)
+                    {
+                        <dib>
+                            <p>
+                                @Html.DisplayFor(modelItem => item.Surname)
+                            </p>
+                            <p>
+                                @Html.DisplayFor(modelItem => item.Name)
+                            </p>
+                            <p>
+                                @Html.DisplayFor(modelItem => item.Patronymic)
+                            </p>
+                        </dib>
+                    }
+                    <form action="Login" method="get">
+                        <button class="btn btn-primary btn-block" type="submit">Выход</button>
+                    </form>
+                </div>
+            </div>
+            <!-- //main content -->
+        </div>
+        <!-- //container -->
+    </div>
+</body>
+
